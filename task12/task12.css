@@ -1,0 +1,78 @@
+table{
+	border-collapse: collapse;
+}
+th,td{
+	border:1px solid #fff;
+}
+th{
+	background-color: black;
+	color: white;
+	text-align: left;
+}
+tr:nth-child(even){
+	background-color: grey;
+}
+tr:nth-child(-n+3){
+	color: red;
+}
+form{
+	margin:20px 0;
+}
+input{
+	width: 170px;
+	height: 50px;
+}
+@keyframes WidthChange{
+	from{width:170px;}
+	to{width:300px;}
+}
+input:focus{
+	animation: WidthChange 3s;
+	width:300px;
+}
+.wrap{
+	position: relative;
+	width: 300px;
+	height: 125px;
+}
+.wrap div{
+	width: 300px;
+	height: 125px;
+	position: absolute;
+}
+.wrap ul{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	margin-right: -1px;
+	overflow: hidden;
+	margin:0;
+	padding: 0;
+	z-index: 20;
+}
+.wrap ul li{
+   margin-right: 1px;
+   list-style-type: none;
+   float: left;
+}
+.wrap ul li a{
+   display: block;
+   width: 30px;
+   height: 30px;
+   background-color: lightgreen;
+   text-align: center;
+   line-height: 30px;
+   text-decoration: none;
+}
+.wrap div:nth-child(2){
+	background-color: yellow;
+}
+.wrap div:nth-of-type(2){
+	background-color: blue;
+}
+.wrap div:nth-of-type(3){
+	background-color: green;
+}
+#yel:target,#blu:target,#gre:target{
+    z-index: 10;                   /*该有链接的div处于点击状态下时*/
+}

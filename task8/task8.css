@@ -1,0 +1,95 @@
+*{
+	padding:0;
+	margin:0;
+	box-sizing: border-box;
+}
+.col{
+	float: left;
+    height: 70px;
+	padding:10px;
+}
+p{
+	border:1px solid #999;
+	float: left;
+	height: 50px;
+	width: 100%;
+    background-color: #eee; /*中间加了一个内部元素就可以用padding实现grid的gutter了，看到边框*/
+}
+.row:before,.row:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.container{
+	background-color: #fff;
+	border:1px solid #999;
+	overflow: hidden;
+	min-height: 300px;
+	padding: 10px;
+}
+  
+	.col-1{
+		width: 8.33%;
+	}
+	.col-2{
+		width: 16.66%;
+	}
+	.col-3{
+		width: 24.99%;
+	}                 
+	.col-4{
+		width: 33.32%
+	}
+	.col-5{
+		width: 41.65%;
+	}
+	.col-6{
+		width: 49.98%;
+	}
+	.col-7{
+		width: 58.31%;
+	}
+	.col-8{
+		width: 66.64%;
+	}2
+	.col-9{
+		width: 74.94%;
+	}
+	.col-10{
+		width: 83.3%;
+	}
+	.col-11{
+		width: 91.63%;
+	}
+	.col-12{
+		width: 100%;
+	}
+
+@media all and (max-width:767px){  /*这个max-width是浏览器窗口的短度。all是适用于所有的终端*/
+	.row-1 .col-4{
+		width: 49.98%;
+	}
+	.row-1 .col-4:last-of-type{
+		width: 100%;
+	}
+	.row-2 .col-3{
+		width: 24.99%;
+	}
+	.row-2 .col-6{
+		width:49.98%;    /*第二栏虽然宽度没变，但是也要设置，因为@media,清空了原设置*/
+	}                      
+    .row-3 .col-1{
+    	width: 16.66%;
+    }
+    .row-3 div:nth-child(3){
+    	width:66.64%;
+    }
+    .row-3 div:nth-child(4){
+    	width:24.99%;
+    }
+    .row-3 .col-6{
+    	width:24.99%;
+    }
+}
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task28</title>
+</head>
+<style>
+	.selkey{
+        margin:0 20px 40px 100px;
+	}
+	label{
+		font:bold 22px '宋体';
+		background-color: white;
+		width: 20px;
+		height: 20px;
+	}
+	.container{
+		width: 625px;
+		height: 300px;
+		margin:200px auto 0px;
+	}
+    select{
+        width:240px;
+        height: 45px;
+        margin:0 20px 0 20px;
+        box-shadow: 0 0 2px #949494;
+        border-radius:5px;
+	}
+	.unstudent>input{
+		width:400px;
+        height: 43px;
+        margin:0 20px 0 20px;
+        box-shadow: 0 0 2px #949494;
+        border-radius:5px;
+        border:1px solid #949494;
+	}
+   .student{
+   	display: block;
+   }
+   .unstudent{
+   	display: none;
+   }
+</style>
+<body>
+  <div class="container">
+	<input type="radio" class="selkey" name="student" checked="checked"><label for="">在校生</label>
+	<input type="radio" class="selkey" name="student"><label for="">非在校生</label>
+	<div class="student">
+	<label for="">学校</label>
+	<select name="" id="city">
+	</select>
+	<select name="" id="school">
+	</select>
+	</div>
+	<div class="unstudent">
+		<label for="">就业单位</label>
+		<input type="text" id="company">
+	</div>
+  </div>
+  <script src='task28.js'></script>
+</body>
+</html>

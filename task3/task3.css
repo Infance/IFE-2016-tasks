@@ -1,0 +1,49 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+div{
+	padding: 20px;
+	background-color: #eee;
+	border: 1px solid #999;
+	margin: 20px;
+}
+.container{
+	float: left;
+}
+.wrapl{
+	width: 160px;
+	background-color: white;
+	margin: 0;
+	padding: 20px;
+    float: left;
+}
+.mid{
+	margin: 0;
+	background-color: white;
+	margin: 0 142px 0 222px;
+}
+.wrapr{
+	width: 120px;
+	margin: 0;
+	padding: 0;
+	background-color: white;
+	float: right;
+}
+img{
+	width: 80px;
+	height: 80px;
+}
+.wrapl img{
+	float: left;
+	margin-right: 15px;
+}
+.wrapr img{
+	margin-bottom: 20px;
+} 
+figure{
+	padding: 20px;
+}
+.wrap img:nth-child(4){
+	margin-bottom: 0px;
+}

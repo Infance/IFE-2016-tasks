@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task21</title>
+	<style>
+		span{
+			font-size:24px;
+			color:black;
+		}
+		input{
+			width: 240px;
+			height: 30px;
+		}
+		input:hover{
+			box-shadow: 0 0 5px 5px #D361DE;
+		}
+		ul{
+			padding:0;
+		}
+		#tag li{
+           height: 38px;
+           line-height: 38px;
+           background-color: #D361DE;
+           color:white;
+           display: inline-block;
+           margin-right: 5px;
+           padding: 0px 5px;
+           font-size: 24px;
+		}
+		#favorite li{
+           height: 38px;
+           line-height: 38px;
+           background-color: lightgreen;
+           color:white;
+           display: inline-block;
+           margin-right: 5px;
+           padding: 0px 5px;
+           font-size: 24px;
+		}
+	</style>
+</head>
+<body>
+	<span>tag:</span><input id='datain' type="text">
+	<ul id = 'tag'></ul>
+	<textarea name="" id="likes" cols="40" rows="10"></textarea>
+	<div><button id= 'confir'>确认兴趣爱好</button></div>
+	<ul id = 'favorite'></ul>
+	<script src='task21.js'></script>
+</body>
+</html>

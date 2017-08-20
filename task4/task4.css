@@ -1,0 +1,32 @@
+body{
+	padding: 0;
+	margin:0;
+}
+.center{
+	background-color: #ccc;
+	width: 400px;
+	height: 200px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+    margin-top: -100px;
+    margin-left: -200px; 
+}
+.center div:nth-child(1){
+	background-color: #fc0;
+	width: 50px;
+	height: 50px;
+	position: absolute;	
+	top:0px
+	left:0px;
+	border-bottom-right-radius: 	50px;
+}
+.center div:nth-child(2){
+	background-color: #fc0;
+	width: 50px;
+	height: 50px;
+	position: absolute;	
+	bottom:0px;
+	right:0px;
+	border-top-left-radius: 	50px;	
+}

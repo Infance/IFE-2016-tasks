@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task25</title>
+	<style>
+	    *{
+	    	box-sizing: border-box;
+	    }
+	    li{
+	    	list-style: none;
+	    }
+	    #container{
+	    	border:1px solid #A16363;
+	    	width: 200px;
+	    }
+	    .right-arrow{
+	    	display: inline-block;
+	    	width:0;
+	    	height: 0;
+            border-left:10px solid #A16363;
+            border-top:5px solid transparent;
+            border-bottom: 5px solid transparent;
+            margin-right: 5px;
+	    }
+	    .down-arrow{
+	    	display: inline-block;
+	    	width: 0;
+	    	height: 0;
+	    	border-top: 10px solid #A16363;
+	    	border-left: 5px solid transparent;
+	    	border-right: 5px solid transparent;
+	    	margin-right: 5px;
+	    }
+	    .down-show{
+	    	display: block;
+	    }
+	    .down-hidden{
+	    	display: none;
+	    }	
+	</style>
+</head>
+<body>
+	<input  id ='add' type="text"><button id="addbtn">增加</button><button id="delbtn">删除</button><br><input id='search' type="text">
+	<ul id="container">
+		<li class="hand"><span class="right-arrow"></span>Animals
+			<ul class="down-show">
+				<li>dog</li>
+				<li>cat</li>
+				<li>duck</li>
+			</ul>
+		</li>
+		<li class="hand"><span class="right-arrow"></span>Fruit
+			<ul class="down-show">
+				<li class="hand"><span class="right-arrow"></span>apple
+					<ul class="down-show">
+						<li>big</li>
+						<li>small</li>
+					</ul>
+				</li>
+				<li class="hand"><span class="right-arrow"></span>orange
+					<ul class="down-show">
+						<li>sour</li>
+						<li>sweet</li>
+					</ul>
+				</li>
+				<li>banana</li>
+			</ul>
+		</li>
+		<li>Contact</li>
+	</ul>
+	<script src='task25.js'></script>
+</body>
+</html>

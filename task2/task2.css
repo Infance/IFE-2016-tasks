@@ -1,0 +1,130 @@
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	margin:0;
+	background-color: grey;
+}
+li:nth-child(4) a{
+	color: #A99A9A;
+}
+#banner{
+	height: 60px;
+	line-height: 60px;
+	margin:0;
+	padding:0;
+}
+#banner img{
+	width: 130px;
+	margin-left: 15px;
+	margin-top: 5px;
+}
+#banner ul{
+	float: right;
+	margin-right: 15px;
+	list-style: none;
+}
+#banner li{
+	float: left;
+}
+#banner li a{
+	text-decoration: none;
+	margin:5px;
+	color: #FFFFFF;
+	font-size: 12px;
+}
+.container{
+	padding: 20px;
+    background-color: #B4B3B3;
+}
+.pages{
+	padding: 50px;
+	box-shadow: 1px 1px 1px #875252;
+	margin-bottom: 	20px;
+	border:1px solid #9C8484;
+	background-color: white;
+}
+.pages h3{
+	color:  #7D5D5D;
+	line-height: 2.5;
+}
+.pages span{
+	font-size:  8px;
+}
+.pages p{
+	margin-top: 	10px;
+	line-height: 	1.5;
+	text-indent: 	2em;
+}
+.pages figure{
+	border: 1px solid grey;
+	margin-bottom: 20px;
+	padding: 10px;
+	width: 320px;
+	text-align: center;
+	margin-left: 2.5em;
+	margin-top: 1.5em;
+}
+.pages ol{
+	margin-left: 2em;
+}
+.pages table{
+	width: 100%;
+	padding: 0;
+	border: 1px solid grey;
+	border-collapse: collapse;
+}
+.pages th{
+	background-color: black;
+	color: white;
+	text-align: left;
+    padding: 5px;
+}
+.pages td{
+	padding: 5px;
+}
+.tfoot{
+	background-color: #847373;
+}
+
+#form_1 h3{
+	border-left: 3px solid grey;
+}
+#form_1 div{
+	margin:15px 0;
+}
+#form_1 span{
+	display: inline-block;
+	width:38%;
+	margin-right: 10px;
+	text-align: right;
+	vertical-align: top;
+}
+#form_1 p{
+	font-size: 12px;
+	margin-left: 37%;
+	color:grey;
+}
+#form_1 input{
+	margin:3px 0 0 5px;
+}
+#form_1 textarea{
+	width: 50%;
+	height: 200px;
+}
+#sub{
+	height: 25px;
+	width: 80%;
+	background-color: blue;
+}
+#foot{
+	background-color: black;
+	text-align: center;
+	color:white;
+	height: 100px;
+	vertical-align: middle;
+}
+.content{
+	
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task27</title>
+	<style>
+	    .container{
+	    	width: 400px;
+	    	height: 450px;
+	    	margin:100px auto 0;
+	    }
+		button{
+			width: 60px;
+			height: 30px;
+			background-color:#934EDD;
+			border:1px solid blue;
+			border-radius: 5px;
+			color:white;
+			font:bold 16px '宋体';
+			margin-left: 25px;
+			position: relative;
+			right: -296px;			
+		}
+		input{
+			width: 310px;
+			height: 28px;
+			border:1px solid #C0B6B6;
+			border-radius: 5px;
+			font:14px '宋体';
+			padding-left: 5px;
+		}
+		label{
+			display: inline-block;
+			text-align: right;
+			font:bold 14px '宋体';
+			width:60px;
+		}
+		.con-word{
+            margin:5px 0 16px 73px;
+            color: #999;
+            font:bold 12px '宋体';
+		}
+	</style>
+</head>
+<body>
+    <div class="container">
+	    <div>
+	    	<label for="">帐号</label>
+	    	<input type="text">
+	    </div>
+	    <div class="con-word"></div>
+	    <div>
+	    	<label for="">密码</label>
+	    	<input type="password">
+	    </div>
+	    <div class="con-word"></div>
+	    <div>
+	    	<label for="">密码确认</label>
+	    	<input type="password">
+	    </div>
+	    <div class="con-word"></div>
+	    <div>
+	        <label for="">邮箱</label>
+	        <input type="text">
+	    </div>
+	    <div class="con-word"></div>
+	    <div>
+	    	<label>手机</label>
+	    	<input type="text">
+	    </div>
+	    <div class="con-word"></div>
+	    <button onclick = 'check()'>提交</button>
+    </div>
+	<script src='task27.js'></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task38</title>
+	<style>
+		.up{
+			position: absolute;
+			top:9px;
+			right:23px;
+			width:0;
+			height: 0;
+			border-left:7px solid transparent;
+			border-right: 7px solid transparent;
+			border-bottom: 14px solid white;
+			cursor:pointer;
+		}
+		.down{
+			position: absolute;
+			top:31px;
+			right:23px;
+			width:0;
+			height: 0;
+			border-left:7px solid transparent;
+			border-right: 7px solid transparent;
+			border-top: 14px solid white;
+			cursor:pointer;
+		}
+		th{
+			position: relative;
+		}
+	</style>
+</head>
+<body>
+	<table>
+        <tr>
+        	<th>姓名</th>
+        	<th>语文<div class="up" onclick='sortup(0)'></div><div class="down" onclick='sortdown(0)'></div></th>
+        	<th>数学<div class="up" onclick='sortup(1)'></div><div class="down" onclick='sortdown(1)'></div></th>
+        	<th>英语<div class="up" onclick='sortup(2)'></div><div class="down" onclick='sortdown(2)'></div></th>
+        	<th>总分<div class="up" onclick='sortup(3)'></div><div class="down" onclick='sortdown(3)'></div></th>
+        </tr>
+	</table>
+	<script src='task38.js'></script>
+</body>
+</html>
