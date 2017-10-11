@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CURDdemo</title>
+	<link rel="stylesheet" href="G:\code\bootstrap\bootstrap-3.3.7-dist\css\bootstrap.css">
+	<style>
+		label{
+			width:50px;
+			text-align: right;
+			margin-right: 5px;
+		}
+		.form-group{
+			text-align: center;
+		}
+		.form-group:nth-child(3){
+			text-align: left;
+			padding:0 0 0 177px;
+		}
+	</style>
+</head>
+<body>
+	<div id="app">
+		<grid-template :colums="menus" :items="people"></grid-template>	
+	</div>
+
+
+
+	<template id="grid-template">
+	  <div>   <!--template里的所有内容应该包含在一个根元素下-->
+		<div><label>Search</label><input type="text" class="form-control" v-model="searchKey"></div>
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th v-for="col in colums">{{col.name | capitalize}}</th>
+					<th>delete</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr v-for="(item,index) in message">
+					<td v-for="(col,key,index) in colums">
+						<span v-if='col.isKey'><a href="javascript:void(0)" data-toggle="modal" data-target="#CreatModal" @click="EditItem($event)">{{item[col.name]}}</a></span>
+						<span v-else>{{item[col.name]}}</span>
+					</td>
+					<td><button class="btn btn-danger" @click="deleter(index)">Delete</button></td>
+				</tr>
+			</tbody>
+		</table>
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#CreatModal" @click="creat('Creat New Item')">Creat</button>
+		<modal-dialog :title="title" :jacks="colums" :fields="items" :item="item" :mode="mode"></modal-dialog>
+	  </div>	
+	</template>
+
+
+
+	<template id="modal-dialog">
+		<div class="modal fade" id="CreatModal" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header" style="background-color: blue">
+						<h4 class="modal-title" style="text-align: center;color:white;">{{title}}</h4>
+					</div>
+					<div class="modal-body">
+						<div v-for="jack in jacks" class="form-group">
+							<label>{{jack.name}}</label>
+							<select v-if="jack.dataSource" v-model="item[jack.name]" :disabled="mode==2 && jack.isKey">     
+								<option v-for="opt in jack.dataSource" :value="opt">{{opt}}</option>
+							</select>
+							<input v-else type="text" v-model="item[jack.name]" :disabled="mode==2 && jack.isKey">
+						</div>
+					</div>
+					<div class="modal-footer">
+						<div class="form-group">
+							<button type="button" class="btn btn-success" data-dismiss='modal' @click="saveItem()">save</button>
+							<button data-dismiss='modal' type='button' class="btn btn-default">close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</template>
+	<script src="G:\code\jquery\jquery-3.2.1.js"></script>
+	<script src="G:\code\bootstrap\bootstrap-3.3.7-dist\js\bootstrap.js"></script>
+	<script src="../vue.js"></script>
+	<script>
+		const bus = new Vue();
+		Vue.prototype.$bus = bus;
+		var demo = new Vue({
+			el:"#app",			
+			data:{
+				menus:[{
+					 name:'name',
+					 isKey:true
+					},{
+					 name:'age'
+					},{
+					 name:'sex',
+					 dataSource:['Male','Female']
+					}],
+				people:[
+					{name:'Jack',
+					 age:30,
+					 sex:'Male'	
+				},{
+					name:'Jacy',
+					age:23,
+					sex:'Female'
+				},{
+					name:'Bill',
+					age:26,
+					sex:'Male'
+				},{
+					name:'Tracy',
+					age:23,
+					sex:'Female'
+				},{
+					name:'Lucy',
+					age:24,
+					sex:'Female'
+				},{
+					name:'Leonado',
+					age:34,
+					sex:'Male'
+				}
+				]
+			},
+			components:{
+				'grid-template':{
+								template:"#grid-template",
+								data(){
+									return {searchKey:'',
+											mode:0,
+											title:'',
+											item:{}
+											}
+								},
+								props:['colums','items'],
+								methods:{
+										deleter:function(index){
+											this.items.splice(index,1);
+											},
+										creat:function(title){
+											this.title = title;
+											this.mode = 1;
+											this.item = {}
+											},
+										EditItem:function(e){
+											this.mode =2;
+											var pe = e.target.innerHTML
+											this.title = 'Edit Item - ' + pe;
+											for(var i=0;i<this.items.length;i++){
+												if(this.items[i].name == pe){
+													for(var x in this.items[i]){
+														this.item[x] = this.items[i][x];               //模板数据赋给模态框里的输入框
+													}
+												}
+											}
+										}									
+										},
+								components:{
+									'modal-dialog':{
+										template:'#modal-dialog',
+										props:['mode','title','fields','jacks','item'],
+										data(){
+											return{}
+										},
+										methods:{
+											isExist:function(){
+												for(var i=0;i<this.fields.length;i++){
+													if(this.fields[i].name==this.item.name){
+														return true;
+														console.log('1');
+													}
+												}
+												return false;
+											},
+											saveItem:function(){
+												if(this.mode==1){                   //如果是新建模态，则执行
+												if(!$.isEmptyObject(this.item)){          //$.isEmptyObject(obj)判断是否为空对象，obj是一个javascript对象
+												if(!this.isExist()){
+													this.fields.push(this.item)
+												}else{
+													alert(this.item.name+" is already exist")
+													return
+												}
+											   }
+											  }else if(this.mode==2){                            //如果是修改模态，则执行
+											  	for(var i=0;i<this.fields.length;i++){
+											  		if(this.fields[i].name == this.item.name){
+											  			for(var x in this.fields[i]){
+											  				this.fields[i][x] = this.item[x];             //修改模态框的数据赋给模板数据
+											  			}
+											  		}
+											  	}
+											  }
+											}
+										}
+									}
+								},
+								computed:{
+										message:function(){
+											if(this.searchKey){
+											var result = [],
+												value = this.items;
+											for(var i=0;i<value.length;i++){
+												for(var j in value[i]){
+													if(value[i][j].toString().indexOf(this.searchKey) != -1){
+														result.push(value[i]);
+													}
+												}
+											}
+											return result;
+											}else{
+												return this.items;
+												}
+											}									
+								},
+								filters:{               //注意Vue中每个模板都是独立的作用域，如果在父模板中定义过滤器的话，只能在父模板中用。要在子模板中用就要在子模板中定义过滤器
+									capitalize:function(value){
+										if(!value) {
+										return '';
+										}else{
+										var value = value.toString();
+										return value.charAt(0).toUpperCase()+value.slice(1);
+											}
+										}
+									/*filterBy:function(value,arg){
+										var result = [];
+										for(var i=0;i<value.length;i++){
+											for(var j in value[i]){
+												if(value[i][j].indexOf(arg) != -1){
+													result.push(value[i]);
+												}
+											}
+										}
+										return result;
+										}*/
+											}
+										}	
+						}
+						
+		})
+	</script>
+</body>
+</html>
