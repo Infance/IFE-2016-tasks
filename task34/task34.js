@@ -190,28 +190,28 @@ function instru(){
 	    case 'GO':
 	        go();
 	        break;
-	    case "TRA LEF":
+	    case "MOV LEF":
 	        tleft();
 	        break;
-	    case 'TRA TOP':
+	    case 'MOV TOP':
 	        ttop();
 	        break;
-	    case 'TRA RIG':
+	    case 'MOV RIG':
 	        tright();
 	        break;
-	    case 'TRA BOT':
+	    case 'MOV BOT':
 	        tbottom();
 	        break;
-	    case 'MOV LEF':
+	    case 'TRA LEF':
 	        mleft();
 	        break;
-	    case 'MOV RIG':
+	    case 'TRA RIG':
 	        mright();
 	        break;
-	    case 'MOV TOP':
+	    case 'TRA TOP':
 	        mtop();
 	        break;
-	    case 'MOV BOT':
+	    case 'TRA BOT':
 	        mbottom();
 	        break;
 	} 
