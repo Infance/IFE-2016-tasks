@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Infance百度前端技术学院任务</title>
+	<style>
+		*{
+			box-sizing: border-box;
+		}
+		body{
+			    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+			    font-size: 14px;
+			    line-height: 1.42857143;
+			    color: #333;
+			    background-color: #fff;
+			    margin: 0;			
+		}
+
+		.container{
+			    margin-right: auto;
+			    margin-left: auto;
+			    padding-left: 15px;
+			    padding-right: 15px;
+			    background-color: #fff;
+			}
+
+		.breadcrumb{
+			padding: 8px 15px;
+		    margin-bottom: 20px;
+		    list-style: none;
+		    background-color: #f5f5f5;
+		    border-radius: 4px;
+		}
+		
+		.breadcrumb .active{
+			padding-left: 10px;
+		    font-size: 20px;
+		    border-left: 2px solid #777;
+		    color: #777;
+		}
+		.main{
+			margin-bottom: 20px;
+		}
+
+		.alert{
+		    padding: 15px;
+		    margin-bottom: 20px;
+		    border: 1px solid transparent;
+		    border-radius: 4px;
+		    background-color: #d9edf7;
+		    border-color: #bce8f1;
+		    color: #31708f;		    			
+		}
+
+		.alert .alert-info{
+			color: #337ab7;
+		}
+
+		.task-list{
+			padding: 20px 10px 0;
+		    margin-bottom: 20px;
+		    background: #f5f5f5;
+		    margin-right: auto;
+    		margin-left: auto;			
+		}
+
+		.task{
+			float:left;
+    		padding: 0 10px 20px;
+		}
+
+		.task .task-content{
+			display: block;
+		    padding: 5px;
+		    background: #fff;
+		    -webkit-box-shadow: 0 0 2px #949494;
+		    box-shadow: 0 0 2px #949494;
+		    color: #337ab7;
+		    text-decoration: none;			
+		}
+
+		.task-list .task-info{
+			padding: 5px 5px 0;
+		}
+		@media screen and (min-width:992px){
+			.task-list .task{
+				width: 33.33%;
+			}
+		}
+		@media screen and (min-width: 768px){
+			.task-list .task{
+				width: 50%;
+			}
+		}
+
+		.task-list .task-title{
+		    overflow: hidden;
+		    text-overflow: ellipsis;
+		    white-space: nowrap;
+		    width: 100%;
+		    margin: 0 0 5px 0;
+		    color: #333;
+		    font-size: 25px;
+		    font-weight: 600;			
+		}
+
+		.task-list .task-detail{
+		    color: rgba(0,0,0,.54);
+		    font-size: 20px;			
+		}
+		.pull-left{
+			float: left!important;
+		}
+		.pull-right{
+			float: right!important;
+		}
+		.clearfix:after,
+		.clearfix:before{
+			display: table;
+			content: '';
+		}
+		.clearfix:after{
+			clear: both;
+		}
+		.task a:hover{
+			background-color: #DCF4F4;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="breadcrumb">
+			<span class="active">任务列表</span>
+		</div>
+		<div class="alert">
+			<span class="alert-info">第三阶段综合任务</span>
+		</div>
+		<ul class="task-list clearfix">
+			<li class="task">
+				<a href="https://infance.github.io/IFE-2016-tasks/task37/task37.html" class="task-content">
+					<div class="task-info">
+						<div class="task-title">任务三十七：UI组件之浮出层</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">难度：简单</span>
+						</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">发布时间：04-18</span>
+							<span class="pull-right">截止时间：：05-22 23:59</span>
+						</div>
+					</div>
+				</a>
+			</li>
+			<li class="task">
+				<a href="https://infance.github.io/IFE-2016-tasks/task38/task38.html" class="task-content">
+					<div class="task-info">
+						<div class="task-title">任务三十八：UI组件之排序表格</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">难度：中等</span>
+						</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">发布时间：04-18</span>
+							<span class="pull-right">截止时间：：05-22 23:59</span>
+						</div>
+					</div>
+				</a>
+			</li>
+			<li class="task">
+				<a href="https://infance.github.io/IFE-2016-tasks/task39/task39.html" class="task-content">
+					<div class="task-info">
+						<div class="task-title">任务三十九：UI组件之冻结行表格</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">难度：中等</span>
+						</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">发布时间：04-18</span>
+							<span class="pull-right">截止时间：：05-22 23:59</span>
+						</div>
+					</div>
+				</a>
+			</li>
+			<li class="task">
+				<a href="https://infance.github.io/IFE-2016-tasks/task40/task40.html" class="task-content">
+					<div class="task-info">
+						<div class="task-title">任务四十：UI组件之日历组件（一）</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">难度：中等</span>
+						</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">发布时间：04-18</span>
+							<span class="pull-right">截止时间：：05-22 23:59</span>
+						</div>
+					</div>
+				</a>
+			</li>
+			<li class="task">
+				<a href="https://infance.github.io/IFE-2016-tasks/task41/task41.html" class="task-content">
+					<div class="task-info">
+						<div class="task-title">任务四十一：UI组件之日历组件</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">难度：中等</span>
+						</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">发布时间：04-18</span>
+							<span class="pull-right">截止时间：：05-22 23:59</span>
+						</div>
+					</div>
+				</a>
+			</li>												
+		</ul>
+
+
+		<div class="alert">
+			<span class="alert-info">第二阶段JavaScript</span>
+		</div>
+		<ul class="task-list clearfix">
+			<li class="task">
+				<a href="https://infance.github.io/IFE-2016-tasks/task13/task13.html" class="task-content">
+					<div class="task-info">
+						<div class="task-title">任务十三：零基础JavaScript编码（一）</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">难度：简单</span>
+						</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">发布时间：03-21</span>
+							<span class="pull-right">截止时间：：04-21 23:59</span>
+						</div>
+					</div>
+				</a>
+			</li>
+			<li class="task">
+				<a href="https://infance.github.io/IFE-2016-tasks/task14/task14.html" class="task-content">
+					<div class="task-info">
+						<div class="task-title">任务十四：零基础JavaScript编码（二）</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">难度：简单</span>
+						</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">发布时间：03-21</span>
+							<span class="pull-right">截止时间：：04-21 23:59</span>
+						</div>
+					</div>
+				</a>
+			</li>
+			<li class="task">
+				<a href="https://infance.github.io/IFE-2016-tasks/task15/task15.html" class="task-content">
+					<div class="task-info">
+						<div class="task-title">任务十五：零基础JavaScript编码（三）</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">难度：简单</span>
+						</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">发布时间：03-21</span>
+							<span class="pull-right">截止时间：：04-21 23:59</span>
+						</div>
+					</div>
+				</a>
+			</li>
+			<li class="task">
+				<a href="https://infance.github.io/IFE-2016-tasks/task16/task16.html" class="task-content">
+					<div class="task-info">
+						<div class="task-title">任务十六：零基础JavaScript编码（四）</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">难度：中等</span>
+						</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">发布时间：03-21</span>
+							<span class="pull-right">截止时间：：04-21 23:59</span>
+						</div>
+					</div>
+				</a>
+			</li>
+			<li class="task">
+				<a href="https://infance.github.io/IFE-2016-tasks/task17/task17.html" class="task-content">
+					<div class="task-info">
+						<div class="task-title">任务十七：零基础JavaScript编码（五）</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">难度：简单</span>
+						</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">发布时间：03-21</span>
+							<span class="pull-right">截止时间：：04-21 23:59</span>
+						</div>
+					</div>
+				</a>
+			</li>
+			<li class="task">
+				<a href="https://infance.github.io/IFE-2016-tasks/task18/task18.html" class="task-content">
+					<div class="task-info">
+						<div class="task-title">任务十八：基础JavaScript练习（一）</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">难度：简单</span>
+						</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">发布时间：03-21</span>
+							<span class="pull-right">截止时间：：04-21 23:59</span>
+						</div>
+					</div>
+				</a>
+			</li>
+			<li class="task">
+				<a href="https://infance.github.io/IFE-2016-tasks/task19/task19.html" class="task-content">
+					<div class="task-info">
+						<div class="task-title">任务十九：基础JavaScript练习（二）</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">难度：简单</span>
+						</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">发布时间：03-21</span>
+							<span class="pull-right">截止时间：：04-21 23:59</span>
+						</div>
+					</div>
+				</a>
+			</li>	
+			<li class="task">
+				<a href="https://infance.github.io/IFE-2016-tasks/task20/task20.html" class="task-content">
+					<div class="task-info">
+						<div class="task-title">任务二十：基础JavaScript练习（三）</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">难度：简单</span>
+						</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">发布时间：03-21</span>
+							<span class="pull-right">截止时间：：04-21 23:59</span>
+						</div>
+					</div>
+				</a>
+			</li>	
+			<li class="task">
+				<a href="https://infance.github.io/IFE-2016-tasks/task21/task21.html" class="task-content">
+					<div class="task-info">
+						<div class="task-title">任务二十一：基础JavaScript练习（四）</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">难度：中等</span>
+						</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">发布时间：03-21</span>
+							<span class="pull-right">截止时间：：04-21 23:59</span>
+						</div>
+					</div>
+				</a>
+			</li>	
+			<li class="task">
+				<a href="https://infance.github.io/IFE-2016-tasks/task22/task22.html" class="task-content">
+					<div class="task-info">
+						<div class="task-title">任务二十二：JavaScript和树（一）</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">难度：简单</span>
+						</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">发布时间：03-21</span>
+							<span class="pull-right">截止时间：：04-21 23:59</span>
+						</div>
+					</div>
+				</a>
+			</li>
+			<li class="task">
+				<a href="https://infance.github.io/IFE-2016-tasks/task23/task23.html" class="task-content">
+					<div class="task-info">
+						<div class="task-title">任务二十三：JavaScript和树（二）</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">难度：简单</span>
+						</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">发布时间：03-21</span>
+							<span class="pull-right">截止时间：：04-21 23:59</span>
+						</div>
+					</div>
+				</a>
+			</li>	
+			<li class="task">
+				<a href="https://infance.github.io/IFE-2016-tasks/task24/task24.html" class="task-content">
+					<div class="task-info">
+						<div class="task-title">任务二十四：JavaScript和树（三）</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">难度：简单</span>
+						</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">发布时间：03-21</span>
+							<span class="pull-right">截止时间：：04-21 23:59</span>
+						</div>
+					</div>
+				</a>
+			</li>	
+			<li class="task">
+				<a href="https://infance.github.io/IFE-2016-tasks/task25/task25.html" class="task-content">
+					<div class="task-info">
+						<div class="task-title">任务二十五：JavaScript和树（四）</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">难度：中等</span>
+						</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">发布时间：03-21</span>
+							<span class="pull-right">截止时间：：04-21 23:59</span>
+						</div>
+					</div>
+				</a>
+			</li>
+			<li class="task">
+				<a href="https://infance.github.io/IFE-2016-tasks/task26/task26.html" class="task-content">
+					<div class="task-info">
+						<div class="task-title">任务二十六：表单（一）单个表单项</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">难度：简单</span>
+						</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">发布时间：03-21</span>
+							<span class="pull-right">截止时间：：04-21 23:59</span>
+						</div>
+					</div>
+				</a>
+			</li>
+			<li class="task">
+				<a href="https://infance.github.io/IFE-2016-tasks/task27/task27.html" class="task-content">
+					<div class="task-info">
+						<div class="task-title">任务二十七：表单（二）多个表单项</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">难度：中等</span>
+						</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">发布时间：03-21</span>
+							<span class="pull-right">截止时间：：04-21 23:59</span>
+						</div>
+					</div>
+				</a>
+			</li>
+			<li class="task">
+				<a href="https://infance.github.io/IFE-2016-tasks/task28/task28.html" class="task-content">
+					<div class="task-info">
+						<div class="task-title">任务二十八：表单（三）联动</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">难度：中等</span>
+						</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">发布时间：03-21</span>
+							<span class="pull-right">截止时间：：04-21 23:59</span>
+						</div>
+					</div>
+				</a>
+			</li>
+			<li class="task">
+				<a href="https://infance.github.io/IFE-2016-tasks/task33/task33.html" class="task-content">
+					<div class="task-info">
+						<div class="task-title">任务三十三：听指令的小方块（一）</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">难度：中等</span>
+						</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">发布时间：03-21</span>
+							<span class="pull-right">截止时间：：04-21 23:59</span>
+						</div>
+					</div>
+				</a>
+			</li>	
+			<li class="task">
+				<a href="https://infance.github.io/IFE-2016-tasks/task34/task34.html" class="task-content">
+					<div class="task-info">
+						<div class="task-title">任务三十四：听指令的小方块（二）</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">难度：中等</span>
+						</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">发布时间：03-21</span>
+							<span class="pull-right">截止时间：：04-21 23:59</span>
+						</div>
+					</div>
+				</a>
+			</li>
+																																																			
+		</ul>
+
+
+		<div class="alert">
+			<span class="alert-info">第一阶段HTML+CSS</span>
+		</div>
+		<ul class="task-list clearfix">
+			<li class="task">
+				<a href="https://infance.github.io/IFE-2016-tasks/task1/task1.html" class="task-content">
+					<div class="task-info">
+						<div class="task-title">任务一：零基础HTML编码</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">难度：简单</span>
+						</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">发布时间：03-14</span>
+							<span class="pull-right">截止时间：：04-03 23:59</span>
+						</div>
+					</div>
+				</a>
+			</li>
+			<li class="task">
+				<a href="https://infance.github.io/IFE-2016-tasks/task2/task2.html" class="task-content">
+					<div class="task-info">
+						<div class="task-title">任务二：零基础HTML及CSS编码（一）</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">难度：简单</span>
+						</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">发布时间：03-14</span>
+							<span class="pull-right">截止时间：：04-03 23:59</span>
+						</div>
+					</div>
+				</a>
+			</li>
+			<li class="task">
+				<a href="https://infance.github.io/IFE-2016-tasks/task3/task3.html" class="task-content">
+					<div class="task-info">
+						<div class="task-title">任务三：三栏式布局</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">难度：简单</span>
+						</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">发布时间：03-14</span>
+							<span class="pull-right">截止时间：：04-03 23:59</span>
+						</div>
+					</div>
+				</a>
+			</li>
+			<li class="task">
+				<a href="https://infance.github.io/IFE-2016-tasks/task4/task4.html" class="task-content">
+					<div class="task-info">
+						<div class="task-title">任务四：定位和居中问题</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">难度：简单</span>
+						</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">发布时间：03-14</span>
+							<span class="pull-right">截止时间：：04-03 23:59</span>
+						</div>
+					</div>
+				</a>
+			</li>
+			<li class="task">
+				<a href="https://infance.github.io/IFE-2016-tasks/task5/task5.html" class="task-content">
+					<div class="task-info">
+						<div class="task-title">任务五：零基础HTML及CSS编码（二）</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">难度：简单</span>
+						</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">发布时间：03-14</span>
+							<span class="pull-right">截止时间：：04-03 23:59</span>
+						</div>
+					</div>
+				</a>
+			</li>
+			<li class="task">
+				<a href="https://infance.github.io/IFE-2016-tasks/task6/task6.html" class="task-content">
+					<div class="task-info">
+						<div class="task-title">任务六：通过HTML及CSS模拟报纸排版</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">难度：简单</span>
+						</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">发布时间：03-14</span>
+							<span class="pull-right">截止时间：：04-03 23:59</span>
+						</div>
+					</div>
+				</a>
+			</li>
+			<li class="task">
+				<a href="https://infance.github.io/IFE-2016-tasks/task7/task7.html" class="task-content">
+					<div class="task-info">
+						<div class="task-title">任务七：实现常见的技术产品官网</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">难度：简单</span>
+						</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">发布时间：03-14</span>
+							<span class="pull-right">截止时间：：04-03 23:59</span>
+						</div>
+					</div>
+				</a>
+			</li>
+			<li class="task">
+				<a href="https://infance.github.io/IFE-2016-tasks/task8/task8.html" class="task-content">
+					<div class="task-info">
+						<div class="task-title">任务八：响应式网格布局</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">难度：中等</span>
+						</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">发布时间：03-14</span>
+							<span class="pull-right">截止时间：：04-03 23:59</span>
+						</div>
+					</div>
+				</a>
+			</li>
+			<li class="task">
+				<a href="https://infance.github.io/IFE-2016-tasks/task9/task9.html" class="task-content">
+					<div class="task-info">
+						<div class="task-title">任务九：使用HTML/CSS实现一个复用页面</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">难度：中等</span>
+						</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">发布时间：03-14</span>
+							<span class="pull-right">截止时间：：04-03 23:59</span>
+						</div>
+					</div>
+				</a>
+			</li>
+			<li class="task">
+				<a href="https://infance.github.io/IFE-2016-tasks/task10/task10.html" class="task-content">
+					<div class="task-info">
+						<div class="task-title">任务十：Flexbox布局练习</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">难度：中等</span>
+						</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">发布时间：03-14</span>
+							<span class="pull-right">截止时间：：04-03 23:59</span>
+						</div>
+					</div>
+				</a>
+			</li>
+			<li class="task">
+				<a href="https://infance.github.io/IFE-2016-tasks/task12/task12.html" class="task-content">
+					<div class="task-info">
+						<div class="task-title">任务十二：学习CSS3的新特性</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">难度：简单</span>
+						</div>
+						<div class="task-detail clearfix">
+							<span class="pull-left">发布时间：03-14</span>
+							<span class="pull-right">截止时间：：04-03 23:59</span>
+						</div>
+					</div>
+				</a>
+			</li>																																																
+		</ul>
+
+	</div>
+</body>
+</html>
